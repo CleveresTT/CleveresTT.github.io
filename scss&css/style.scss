@@ -1,0 +1,147 @@
+body{
+    background: #E5E5E5;
+}
+
+.main-frame{
+    position: relative;
+    width: 1520px;
+    height: 828px;
+    background: #FAFBFF;
+    left: 183px;
+    top: 43px;
+    /* Окно логина */
+    .login-frame{
+        position: absolute;
+        width: 370px;
+        height: 169px;
+        left: 875px;
+        top: 97px;
+        padding-left:30px;
+        padding-top:38px;
+        color: #5E5E5E;
+        font-family: 'Roboto';
+        font-size: 16px;
+        background: #FFFFFF;
+        border: 1px solid rgba(35, 44, 94, 0.21);
+        box-sizing: border-box;
+        box-shadow: 0px 6px 25px rgba(19, 35, 68, 0.1);
+        border-radius: 8px;
+        /* Поле ввода логина */
+        .input-area{
+            width: 309.72px;
+            height: 54px;
+            margin-top: 13px;
+            background: #FFFFFF;
+            border: 1px solid #232C5E;
+            box-sizing: border-box;
+            border-radius: 8px;
+            color: #222222;
+            padding-left: 19px;
+            font-size: inherit;
+        }
+        /* текущей пользователь */
+        .user-login{
+            margin-right: 29px;
+            float: right;
+        }
+    }
+    /* Окно чата */
+    .chat-frame{
+        position: absolute;
+        width: 570px;
+        height: 628px;
+        left: 175px;
+        top: 76px;
+        background: rgba(11, 17, 69, 0.04);
+        border: 1px solid rgba(35, 44, 94, 0.21);
+        box-sizing: border-box;
+        box-shadow: 0px 6px 25px rgba(19, 35, 68, 0.1);
+        border-radius: 8px;
+        /* Поле ввода сообщения */
+        .send-message{
+            position: absolute;
+            width: 506px;
+            height: 54px;
+            left: 32px;
+            top: 537px;
+            background: #FFFFFF;
+            border: 1px solid rgba(35, 44, 94, 0.21);
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 18px 18px;
+            padding-right: 50px;
+            font-family: 'Roboto';
+            font-size: 16px;
+            resize: none; 
+            overflow: hidden;
+        }
+        /* Кнопка отправки */
+        .send-icon{
+            position: absolute;
+            left: 500px;
+            top: 555px;
+        }
+        /* Окно сообщений */
+        .chat-window{
+            width: 570px;
+            height: 471px;
+            margin-left: -1px;
+            margin-top: 31px;
+            background: #ffffff;
+            border: 1px solid rgba(35, 44, 94, 0.21);
+            box-sizing: border-box;
+            padding-top: 32px;
+            overflow-y: scroll;
+            .message{
+                position: relative;
+                padding-left: 32px;
+                padding-bottom: 32px;
+                .user{
+                    margin-bottom: 6px;
+                    font-family: 'Roboto';
+                    color: #5E5E5E
+                }
+                .message-content{
+                    position: relative;
+                    max-width: 329px;
+                    min-height: 52px;
+                    padding: 17px;
+                    padding-right: 50px;
+                    font-family: 'Roboto';
+                    color: #222222;
+                    box-sizing: border-box;
+                    background: #F5F5F8;
+                    border-radius: 8px;
+                    .message-time{
+                        position: absolute;
+                        font-family: 'Roboto';
+                        font-size: 13px;
+                        float: bottom;
+                        left: 290px;
+                        padding-top: 11px;
+                        color: #969696;
+                    }
+                }
+                .close-icon{
+                    position: absolute;
+                    left: 369px;
+                    top: 26px;
+                }
+            }
+            /* Кастомизация скроллбара */
+            &::-webkit-scrollbar {
+                width: 27px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #ffffff;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 100px;
+                background: rgba(35, 44, 94, 0.12);
+                border: 11px solid transparent;
+                background-clip: content-box;
+            }
+        }
+    }
+    
+}

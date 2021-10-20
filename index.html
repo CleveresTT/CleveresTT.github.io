@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss&css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <title>Test task</title>
+</head>
+<body>
+    <div class="main-frame">
+        <div class="chat-frame">
+            <div class="chat-window">
+
+                <div class="message" id="static"> <!-- Статическое сообщение -->
+                    <div class="user">User1</div> 
+                    <div class="message-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, magni!
+                        <span class="message-time">13:30</span>
+                    </div>
+                    <input type="image" src="img/close-icon.svg" class="close-icon"></input>
+                </div>
+
+                <!-- Сюда будет добавляться разметка, полученная при обработке ответа базы данных -->
+
+            </div>
+
+            <textarea class="send-message" placeholder="Сообщение"></textarea>
+            <input type="image" src="img/send-icon.svg" class="send-icon"></input>
+        </div>
+
+        <div class="login-frame">
+            <span>Введите логин</span>
+            <span class="user-login"></span>
+            <input class="input-area"></input>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
