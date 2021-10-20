@@ -19,7 +19,7 @@ body{
         padding-left:30px;
         padding-top:38px;
         color: #5E5E5E;
-        font-family: 'Roboto';
+        font-family: Roboto;
         font-size: 16px;
         background: #FFFFFF;
         border: 1px solid rgba(35, 44, 94, 0.21);
@@ -70,7 +70,7 @@ body{
             border-radius: 8px;
             padding: 18px 18px;
             padding-right: 50px;
-            font-family: 'Roboto';
+            font-family: Roboto;
             font-size: 16px;
             resize: none; 
             overflow: hidden;
@@ -98,7 +98,7 @@ body{
                 padding-bottom: 32px;
                 .user{
                     margin-bottom: 6px;
-                    font-family: 'Roboto';
+                    font-family: Roboto;
                     color: #5E5E5E
                 }
                 .message-content{
@@ -107,14 +107,14 @@ body{
                     min-height: 52px;
                     padding: 17px;
                     padding-right: 50px;
-                    font-family: 'Roboto';
+                    font-family: Roboto;
                     color: #222222;
                     box-sizing: border-box;
                     background: #F5F5F8;
                     border-radius: 8px;
                     .message-time{
                         position: absolute;
-                        font-family: 'Roboto';
+                        font-family: Roboto;
                         font-size: 13px;
                         float: bottom;
                         left: 290px;
