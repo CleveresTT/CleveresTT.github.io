@@ -1,0 +1,17 @@
+{
+    "name": "doof/svoyaigra",
+    "type": "project",
+    "authors": [
+        {
+            "name": "CleveresTT",
+            "email": "sergey_semenov01@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "twig/twig": "^3.4",
+        "selective/basepath": "^2.1"
+    }
+}

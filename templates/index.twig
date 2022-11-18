@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+    <h4>Своя Игра выходит в эфир на телеканале НТВ по субботам и воскресеньям в 15:00</h4>
+    <table class="table-main">
+        {% for tv in tvs_list%}
+            <tr>
+                <td>
+                    №{{ tv['id телепередачи'] }}
+                </td>
+                <td>
+                    <a href="/tvs/{{tv['id телепередачи']}}">{{ tv['Дата'] }}</a>
+                </td>
+                {% for i in 0..2 %}
+                <td {% if tv['Игроки'][i]['Победитель'] %} class="winner" {% endif %}>
+                    {{ tv['Игроки'][i]['Имя'] }} {{ tv['Игроки'][i]['Фамилия'] }}<br>
+                    <span class="score">{{ tv['Игроки'][i]['Счет'] }}</span>
+                </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

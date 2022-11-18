@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+
+    <link href="{{ app.request.getBaseURL() }}/public/css/style.css" rel="stylesheet">
+    <link href="{{ app.request.getBaseURL() }}/public/css/normalize.min.css" rel="stylesheet">
+</head>
+<body id="app">
+    <header>
+        <div class="inner-wide">
+            <div class="header-block">
+                <a href="/" class="logo"></a>
+                <div class="desc">Анонсы выходят по субботам в 18:00 и воскресеньям в 21:00 (время московское).</div>
+                <!-- <div class="contacts-1">
+                    <a href="" class="phone-1">+7 (111) 111-11-11</a>
+                    <a href="" class="email">123123123@gmail.com</a>
+                </div>
+                <div class="contacts-2">
+                    <div class="address">
+                        <div style="margin-right: 0.5rem;">АДРЕС: </div>
+                        <div>г. Чебоксары</div>
+                    </div>
+                    <button class="callback">Заказать обратный звонок
+                </div> -->
+                <!-- <a href="" class="basket">
+                    <div class="svg"></div>
+                    <div class="info">
+                        <div class="count">
+                        </div>
+                        <div class="amount">
+                        </div>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="menu">
+            <ul>
+                {% for tv in tvs_date%}
+                    <li><a href="/tvs/{{tv['id телепередачи']}}"><div>{{tv['Дата']}}</div></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="main-content">
+            {% block body %} {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <!-- <div class="inner">
+            <div class="upper-block">
+                <div class="logo"></div>
+                <div class="contacts-1">
+                    <a href="" class="phone-1">+7 (111) 111-11-11</a>
+                    <a href="" class="email">123123123@gmail.com</a>
+                </div>
+                <div class="contacts-2">
+                    <div class="address">
+                        <div style="margin-right: 0.5rem;">АДРЕС: </div>
+                        <div>г. Чебоксары</div>
+                    </div>
+                    <button class="callback">Заказать обратный звонок
+                </div>
+                <div class="socials">
+                    <div class="vk"></div>
+                    <div class="tg"></div>
+                </div>
+            </div>
+        </div> -->
+        <div class="lower-block">
+            <div class="inner">
+                <div>
+                    <div>© 2012-2022 Своя Игра.org</div>
+                    <div>Сайт не связан с редакцией телепередачи «Своя игра» </div>
+                    <div>© Производство телепередачи «Своя игра» Студия 2В</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-yandex-maps@0.11.11/dist/vue-yandex-maps.min.js"></script>
+
+    <script src="{{ app.request.getBaseURL() }}/js/script.js"></script>
+</body>
+</html>

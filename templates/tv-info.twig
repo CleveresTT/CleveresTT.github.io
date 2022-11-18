@@ -1,0 +1,64 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+    <h3>Своя Игра №{{ tv['id телепередачи'] }}, {{ tv['Дата'] }}</h3>
+
+    <table class="table-tv">
+        <tr>
+            <td style="opacity: 0"></td>
+            {% for i in 0..2 %}
+            <td colspan="2">
+                <a href="/gamers/{{ players[i]['id игрока'] }}">{{ players[i]['ФИО'] }}</a><br>
+                    {{ players[i]['Род деятельности'] }};
+                    {{ players[i]['Город проживания'] }}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>1-й раунд</td>
+            {% for i in 0..2 %}
+            <td>{{ players[i]['Счет за раунд 1'] }}</td>
+            <td> ответы +{{ players[i]['Правильные ответы за раунд 1'] }}-{{ players[i]['Неправильные ответы за раунд 1'] }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>2-й раунд</td>
+            {% for i in 0..2 %}
+                <td>{{ players[i]['Счет за раунд 2'] }}</td>
+                <td> ответы +{{ players[i]['Правильные ответы за раунд 2'] }}-{{ players[i]['Неправильные ответы за раунд 2'] }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>3-й раунд</td>
+            {% for i in 0..2 %}
+                <td>{{ players[i]['Счет за раунд 3'] }}</td>
+                <td> ответы +{{ players[i]['Правильные ответы за раунд 3'] }}-{{ players[i]['Неправильные ответы за раунд 3'] }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>финал</td>
+            {% for i in 0..2 %}
+                <td>{{ players[i]['Счет за раунд 4'] }}</td>
+                <td></td>
+            {% endfor %}
+        </tr>
+        {% if gunplay %}
+        <tr>
+            <td>перестрелка</td>
+            {% for i in 0..2 %}
+                <td>{{ players[i]['Счет за раунд 5'] }}</td>
+                <td> ответы +{{ players[i]['Правильные ответы за раунд 5'] }}-{{ players[i]['Неправильные ответы за раунд 5'] }}</td>
+            {% endfor %}
+        </tr>
+        {% endif %}
+        <tr>
+            <td>итог</td>
+            {% for i in 0..2 %}
+                <td>{{ players[i]['Счет за игру'] }}</td>
+                <td> ответы +{{ players[i]['Правильные ответы за игру'] }}-{{ players[i]['Неправильные ответы за игру'] }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+
+{% endblock %}
